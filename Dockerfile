@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update -y && apt-get install -y php libapache2-mod-php php-mysql apache2
 RUN ls -l /var/www/html
 RUN rm -f /var/www/html/index.html
-COPY mycode/ /var/www/html/
+COPY ./ /var/www/html/
 EXPOSE 80
 
 CMD apachectl -D FOREGROUND
